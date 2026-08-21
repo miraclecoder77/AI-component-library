@@ -1,0 +1,324 @@
+/*
+ * Design tokens.
+ *
+ * Three tiers. Components may only reference tier 2/3 (semantic + AI-specific).
+ * Raw ramps exist so the semantic layer has somewhere to point.
+ *
+ * Theming is defined three times on purpose:
+ *   1. bare :root                      -> complete light palette
+ *   2. @media (prefers-color-scheme)   -> system dark, guarded so an explicit
+ *                                         light choice still wins
+ *   3. :root[data-theme="dark"]        -> explicit dark choice
+ * No color gets its only definition inside a media query.
+ */
+
+/* ---------------------------------------------------------------- *
+ * Tier 1 - primitives (light)
+ * ---------------------------------------------------------------- */
+
+:root {
+  /* Neutral ramp, very slightly cool. 1 = furthest from text, 12 = text. */
+  --gray-1: oklch(0.993 0.002 270);
+  --gray-2: oklch(0.976 0.003 270);
+  --gray-3: oklch(0.955 0.004 270);
+  --gray-4: oklch(0.932 0.005 270);
+  --gray-5: oklch(0.903 0.006 270);
+  --gray-6: oklch(0.863 0.008 270);
+  --gray-7: oklch(0.802 0.010 270);
+  --gray-8: oklch(0.706 0.013 270);
+  --gray-9: oklch(0.557 0.015 270);
+  --gray-10: oklch(0.487 0.015 270);
+  --gray-11: oklch(0.382 0.013 270);
+  --gray-12: oklch(0.205 0.009 270);
+
+  /* Accent ramp - electric indigo. */
+  --accent-1: oklch(0.99 0.005 277);
+  --accent-2: oklch(0.975 0.014 277);
+  --accent-3: oklch(0.948 0.032 277);
+  --accent-4: oklch(0.918 0.052 277);
+  --accent-5: oklch(0.878 0.072 277);
+  --accent-6: oklch(0.827 0.094 277);
+  --accent-7: oklch(0.757 0.124 277);
+  --accent-8: oklch(0.676 0.163 277);
+  --accent-9: oklch(0.548 0.218 277);
+  --accent-10: oklch(0.502 0.208 277);
+  --accent-11: oklch(0.468 0.197 277);
+  --accent-12: oklch(0.282 0.118 277);
+
+  /* Status hues. */
+  --green-9: oklch(0.523 0.148 150);
+  --green-11: oklch(0.452 0.132 150);
+  --amber-9: oklch(0.712 0.152 72);
+  --amber-11: oklch(0.522 0.128 62);
+  --red-9: oklch(0.552 0.203 27);
+  --red-11: oklch(0.498 0.198 27);
+
+  --accent-contrast: oklch(0.99 0.005 277);
+  color-scheme: light;
+}
+
+/* ---------------------------------------------------------------- *
+ * Tier 1 - primitives (dark), for system preference and explicit choice.
+ * ---------------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --gray-1: oklch(0.162 0.006 270);
+    --gray-2: oklch(0.192 0.007 270);
+    --gray-3: oklch(0.231 0.009 270);
+    --gray-4: oklch(0.268 0.010 270);
+    --gray-5: oklch(0.306 0.011 270);
+    --gray-6: oklch(0.358 0.012 270);
+    --gray-7: oklch(0.428 0.013 270);
+    --gray-8: oklch(0.542 0.014 270);
+    --gray-9: oklch(0.638 0.013 270);
+    --gray-10: oklch(0.716 0.011 270);
+    --gray-11: oklch(0.842 0.008 270);
+    --gray-12: oklch(0.962 0.004 270);
+
+    --accent-1: oklch(0.188 0.028 277);
+    --accent-2: oklch(0.228 0.048 277);
+    --accent-3: oklch(0.278 0.088 277);
+    --accent-4: oklch(0.328 0.118 277);
+    --accent-5: oklch(0.378 0.140 277);
+    --accent-6: oklch(0.448 0.162 277);
+    --accent-7: oklch(0.518 0.182 277);
+    --accent-8: oklch(0.578 0.202 277);
+    --accent-9: oklch(0.622 0.212 277);
+    --accent-10: oklch(0.672 0.198 277);
+    --accent-11: oklch(0.782 0.148 277);
+    --accent-12: oklch(0.912 0.058 277);
+
+    --green-9: oklch(0.748 0.168 150);
+    --green-11: oklch(0.822 0.152 150);
+    --amber-9: oklch(0.802 0.152 80);
+    --amber-11: oklch(0.868 0.138 84);
+    --red-9: oklch(0.698 0.192 25);
+    --red-11: oklch(0.782 0.152 25);
+
+    --accent-contrast: oklch(0.145 0.022 277);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --gray-1: oklch(0.162 0.006 270);
+  --gray-2: oklch(0.192 0.007 270);
+  --gray-3: oklch(0.231 0.009 270);
+  --gray-4: oklch(0.268 0.010 270);
+  --gray-5: oklch(0.306 0.011 270);
+  --gray-6: oklch(0.358 0.012 270);
+  --gray-7: oklch(0.428 0.013 270);
+  --gray-8: oklch(0.542 0.014 270);
+  --gray-9: oklch(0.638 0.013 270);
+  --gray-10: oklch(0.716 0.011 270);
+  --gray-11: oklch(0.842 0.008 270);
+  --gray-12: oklch(0.962 0.004 270);
+
+  --accent-1: oklch(0.188 0.028 277);
+  --accent-2: oklch(0.228 0.048 277);
+  --accent-3: oklch(0.278 0.088 277);
+  --accent-4: oklch(0.328 0.118 277);
+  --accent-5: oklch(0.378 0.140 277);
+  --accent-6: oklch(0.448 0.162 277);
+  --accent-7: oklch(0.518 0.182 277);
+  --accent-8: oklch(0.578 0.202 277);
+  --accent-9: oklch(0.622 0.212 277);
+  --accent-10: oklch(0.672 0.198 277);
+  --accent-11: oklch(0.782 0.148 277);
+  --accent-12: oklch(0.912 0.058 277);
+
+  --green-9: oklch(0.748 0.168 150);
+  --green-11: oklch(0.822 0.152 150);
+  --amber-9: oklch(0.802 0.152 80);
+  --amber-11: oklch(0.868 0.138 84);
+  --red-9: oklch(0.698 0.192 25);
+  --red-11: oklch(0.782 0.152 25);
+
+  --accent-contrast: oklch(0.145 0.022 277);
+  color-scheme: dark;
+}
+
+/* ---------------------------------------------------------------- *
+ * Tier 2 - semantic. Theme-independent: they point at ramp steps,
+ * and the ramps above already flipped.
+ * ---------------------------------------------------------------- */
+
+:root {
+  --bg-canvas: var(--gray-1);
+  --bg-subtle: var(--gray-2);
+  --bg-raised: var(--gray-3);
+  --bg-hover: var(--gray-4);
+  --bg-active: var(--gray-5);
+
+  --fg-default: var(--gray-12);
+  --fg-muted: var(--gray-11);
+  --fg-subtle: var(--gray-9);
+  --fg-on-accent: var(--accent-contrast);
+
+  --border-subtle: var(--gray-5);
+  --border-default: var(--gray-6);
+  --border-strong: var(--gray-7);
+  --border-focus: var(--accent-9);
+
+  --accent-bg: var(--accent-3);
+  --accent-line: var(--accent-6);
+  --accent-solid: var(--accent-9);
+  --accent-solid-hover: var(--accent-10);
+  --accent-text: var(--accent-11);
+
+  --danger-solid: var(--red-9);
+  --danger-text: var(--red-11);
+  --warning-solid: var(--amber-9);
+  --warning-text: var(--amber-11);
+  --success-solid: var(--green-9);
+  --success-text: var(--green-11);
+
+  /* ---- Tier 3: AI-specific semantics --------------------------- *
+   * A generic design system has no vocabulary for these states.
+   * Naming them here is what keeps streaming UI consistent across
+   * every demo instead of being re-invented per component.
+   * -------------------------------------------------------------- */
+
+  /* caret pinned to the tail of streaming text */
+  --stream-cursor: var(--accent-9);
+
+  /* model is reasoning; no user-visible output yet */
+  --surface-thinking: var(--gray-3);
+  --fg-thinking: var(--gray-10);
+
+  /* tool / function call cards in the agent timeline */
+  --surface-tool: var(--gray-2);
+  --border-tool: var(--accent-6);
+
+  /* applied locally, not yet confirmed by the server */
+  --surface-optimistic: var(--gray-2);
+  --fg-optimistic: var(--gray-9);
+
+  /* replaying a recorded fixture rather than calling the live API */
+  --surface-recorded: var(--amber-9);
+
+  /* time-to-first-token thresholds: <300ms / <800ms / slower */
+  --fg-latency-good: var(--green-11);
+  --fg-latency-warn: var(--amber-11);
+  --fg-latency-bad: var(--red-11);
+
+  /* agent step states */
+  --step-pending: var(--gray-7);
+  --step-active: var(--accent-9);
+  --step-done: var(--green-9);
+  --step-error: var(--red-9);
+  --step-connector: var(--gray-6);
+}
+
+/* ---------------------------------------------------------------- *
+ * Type, space, radius, elevation
+ * ---------------------------------------------------------------- */
+
+:root {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", "Cascadia Mono",
+    Menlo, monospace;
+
+  /* Tight scale, ~1.2 ratio. Machine metadata lives at 1 and 2. */
+  --text-1: 0.75rem;
+  --text-2: 0.8125rem;
+  --text-3: 0.875rem;
+  --text-4: 1rem;
+  --text-5: 1.125rem;
+  --text-6: 1.375rem;
+  --text-7: 1.75rem;
+  --text-8: 2.25rem;
+  --text-9: 3rem;
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* 4px base */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  --radius-1: 3px;
+  --radius-2: 6px;
+  --radius-3: 9px;
+  --radius-4: 12px;
+  --radius-5: 16px;
+  --radius-full: 9999px;
+
+  --shadow-1: 0 1px 2px oklch(0 0 0 / 0.06);
+  --shadow-2: 0 2px 8px oklch(0 0 0 / 0.08), 0 1px 2px oklch(0 0 0 / 0.04);
+  --shadow-3: 0 8px 24px oklch(0 0 0 / 0.12), 0 2px 6px oklch(0 0 0 / 0.06);
+
+  --container: 68rem;
+  --container-prose: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --shadow-1: 0 1px 2px oklch(0 0 0 / 0.3);
+    --shadow-2: 0 2px 8px oklch(0 0 0 / 0.36), 0 1px 2px oklch(0 0 0 / 0.24);
+    --shadow-3: 0 8px 24px oklch(0 0 0 / 0.44), 0 2px 6px oklch(0 0 0 / 0.28);
+  }
+}
+
+:root[data-theme="dark"] {
+  --shadow-1: 0 1px 2px oklch(0 0 0 / 0.3);
+  --shadow-2: 0 2px 8px oklch(0 0 0 / 0.36), 0 1px 2px oklch(0 0 0 / 0.24);
+  --shadow-3: 0 8px 24px oklch(0 0 0 / 0.44), 0 2px 6px oklch(0 0 0 / 0.28);
+}
+
+/* ---------------------------------------------------------------- *
+ * Motion
+ *
+ * Every animation in the system reads a duration token. Collapsing
+ * them to 0ms in one place is what makes reduced-motion support
+ * global instead of per-component.
+ * ---------------------------------------------------------------- */
+
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-instant: 80ms;
+  --duration-fast: 140ms;
+  --duration-normal: 220ms;
+  --duration-slow: 380ms;
+
+  /* per-token fade as streamed text is revealed */
+  --motion-stream-reveal: 260ms;
+  /* streaming caret blink period */
+  --motion-cursor-blink: 1060ms;
+  /* shimmer sweep on thinking/skeleton surfaces */
+  --motion-shimmer: 1600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --motion-stream-reveal: 0ms;
+    --motion-cursor-blink: 0ms;
+    --motion-shimmer: 0ms;
+  }
+}

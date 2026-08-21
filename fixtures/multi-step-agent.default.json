@@ -1,0 +1,497 @@
+{
+  "pattern": "multi-step-agent",
+  "variant": "default",
+  "model": "gemini-3.7-flash",
+  "synthetic": true,
+  "recordedAt": null,
+  "frames": [
+    {
+      "atMs": 120,
+      "event": {
+        "type": "step",
+        "id": "plan",
+        "label": "Interpret the question",
+        "status": "pending"
+      }
+    },
+    {
+      "atMs": 132,
+      "event": {
+        "type": "step",
+        "id": "retrieve",
+        "label": "Search the pattern corpus",
+        "status": "pending"
+      }
+    },
+    {
+      "atMs": 144,
+      "event": {
+        "type": "step",
+        "id": "analyse",
+        "label": "Select relevant material",
+        "status": "pending"
+      }
+    },
+    {
+      "atMs": 156,
+      "event": {
+        "type": "step",
+        "id": "answer",
+        "label": "Compose the answer",
+        "status": "pending"
+      }
+    },
+    {
+      "atMs": 328,
+      "event": {
+        "type": "step",
+        "id": "plan",
+        "label": "Interpret the question",
+        "status": "active"
+      }
+    },
+    {
+      "atMs": 1228,
+      "event": {
+        "type": "step",
+        "id": "plan",
+        "label": "Interpret the question",
+        "status": "done"
+      }
+    },
+    {
+      "atMs": 1318,
+      "event": {
+        "type": "step",
+        "id": "retrieve",
+        "label": "Search the pattern corpus",
+        "status": "active"
+      }
+    },
+    {
+      "atMs": 1438,
+      "event": {
+        "type": "tool",
+        "id": "search-1",
+        "name": "searchCorpus",
+        "args": {
+          "query": "streaming latency perceived speed",
+          "limit": 3
+        }
+      }
+    },
+    {
+      "atMs": 1698,
+      "event": {
+        "type": "tool",
+        "id": "search-1",
+        "name": "searchCorpus",
+        "args": {
+          "query": "streaming latency perceived speed",
+          "limit": 3
+        },
+        "result": [
+          {
+            "id": "ttft",
+            "title": "Time to first token",
+            "score": 7,
+            "excerpt": "Time to first token (TTFT) is the delay between a request and the first visible character."
+          },
+          {
+            "id": "streaming",
+            "title": "Why streaming changes the interaction",
+            "score": 5,
+            "excerpt": "Streaming converts a loading state into a reading experience."
+          },
+          {
+            "id": "smoothing",
+            "title": "Token smoothing",
+            "score": 3,
+            "excerpt": "Network chunks arrive unevenly -- several tokens at once, then nothing."
+          }
+        ]
+      }
+    },
+    {
+      "atMs": 1788,
+      "event": {
+        "type": "step",
+        "id": "retrieve",
+        "label": "Search the pattern corpus",
+        "status": "done"
+      }
+    },
+    {
+      "atMs": 1898,
+      "event": {
+        "type": "step",
+        "id": "analyse",
+        "label": "Select relevant material",
+        "status": "active"
+      }
+    },
+    {
+      "atMs": 2538,
+      "event": {
+        "type": "step",
+        "id": "analyse",
+        "label": "Select relevant material",
+        "status": "done"
+      }
+    },
+    {
+      "atMs": 2658,
+      "event": {
+        "type": "step",
+        "id": "answer",
+        "label": "Compose the answer",
+        "status": "active"
+      }
+    },
+    {
+      "atMs": 2915,
+      "event": {
+        "type": "delta",
+        "text": "Perceived speed"
+      }
+    },
+    {
+      "atMs": 2940,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 3005,
+      "event": {
+        "type": "delta",
+        "text": "governed by"
+      }
+    },
+    {
+      "atMs": 3055,
+      "event": {
+        "type": "delta",
+        "text": " time "
+      }
+    },
+    {
+      "atMs": 3085,
+      "event": {
+        "type": "delta",
+        "text": "to first"
+      }
+    },
+    {
+      "atMs": 3135,
+      "event": {
+        "type": "delta",
+        "text": " token "
+      }
+    },
+    {
+      "atMs": 3460,
+      "event": {
+        "type": "delta",
+        "text": "rather than"
+      }
+    },
+    {
+      "atMs": 3502,
+      "event": {
+        "type": "delta",
+        "text": " total "
+      }
+    },
+    {
+      "atMs": 3566,
+      "event": {
+        "type": "delta",
+        "text": "generation time."
+      }
+    },
+    {
+      "atMs": 3628,
+      "event": {
+        "type": "delta",
+        "text": " Once "
+      }
+    },
+    {
+      "atMs": 3657,
+      "event": {
+        "type": "delta",
+        "text": "the first"
+      }
+    },
+    {
+      "atMs": 3707,
+      "event": {
+        "type": "delta",
+        "text": " characters "
+      }
+    },
+    {
+      "atMs": 3754,
+      "event": {
+        "type": "delta",
+        "text": "appear the"
+      }
+    },
+    {
+      "atMs": 3790,
+      "event": {
+        "type": "delta",
+        "text": " user "
+      }
+    },
+    {
+      "atMs": 3846,
+      "event": {
+        "type": "delta",
+        "text": "switches from"
+      }
+    },
+    {
+      "atMs": 3912,
+      "event": {
+        "type": "delta",
+        "text": " waiting "
+      }
+    },
+    {
+      "atMs": 3965,
+      "event": {
+        "type": "delta",
+        "text": "to reading,"
+      }
+    },
+    {
+      "atMs": 3990,
+      "event": {
+        "type": "delta",
+        "text": " so "
+      }
+    },
+    {
+      "atMs": 4042,
+      "event": {
+        "type": "delta",
+        "text": "the rest"
+      }
+    },
+    {
+      "atMs": 4075,
+      "event": {
+        "type": "delta",
+        "text": " of "
+      }
+    },
+    {
+      "atMs": 4556,
+      "event": {
+        "type": "delta",
+        "text": "the response"
+      }
+    },
+    {
+      "atMs": 4605,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 4655,
+      "event": {
+        "type": "delta",
+        "text": "absorbed rather"
+      }
+    },
+    {
+      "atMs": 4721,
+      "event": {
+        "type": "delta",
+        "text": " than "
+      }
+    },
+    {
+      "atMs": 4752,
+      "event": {
+        "type": "delta",
+        "text": "endured.\n\nThat"
+      }
+    },
+    {
+      "atMs": 5204,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 5227,
+      "event": {
+        "type": "delta",
+        "text": "why streaming"
+      }
+    },
+    {
+      "atMs": 5281,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 5778,
+      "event": {
+        "type": "delta",
+        "text": "worth the"
+      }
+    },
+    {
+      "atMs": 5824,
+      "event": {
+        "type": "delta",
+        "text": " added "
+      }
+    },
+    {
+      "atMs": 5854,
+      "event": {
+        "type": "delta",
+        "text": "complexity, and"
+      }
+    },
+    {
+      "atMs": 5901,
+      "event": {
+        "type": "delta",
+        "text": " why "
+      }
+    },
+    {
+      "atMs": 5943,
+      "event": {
+        "type": "delta",
+        "text": "the arrival"
+      }
+    },
+    {
+      "atMs": 6010,
+      "event": {
+        "type": "delta",
+        "text": " pattern "
+      }
+    },
+    {
+      "atMs": 6036,
+      "event": {
+        "type": "delta",
+        "text": "needs smoothing:"
+      }
+    },
+    {
+      "atMs": 6067,
+      "event": {
+        "type": "delta",
+        "text": " chunks "
+      }
+    },
+    {
+      "atMs": 6103,
+      "event": {
+        "type": "delta",
+        "text": "land in"
+      }
+    },
+    {
+      "atMs": 6127,
+      "event": {
+        "type": "delta",
+        "text": " uneven "
+      }
+    },
+    {
+      "atMs": 6171,
+      "event": {
+        "type": "delta",
+        "text": "bursts, and"
+      }
+    },
+    {
+      "atMs": 6233,
+      "event": {
+        "type": "delta",
+        "text": " rendering "
+      }
+    },
+    {
+      "atMs": 6553,
+      "event": {
+        "type": "delta",
+        "text": "them raw"
+      }
+    },
+    {
+      "atMs": 6602,
+      "event": {
+        "type": "delta",
+        "text": " reads "
+      }
+    },
+    {
+      "atMs": 6633,
+      "event": {
+        "type": "delta",
+        "text": "as stutter"
+      }
+    },
+    {
+      "atMs": 6656,
+      "event": {
+        "type": "delta",
+        "text": " even "
+      }
+    },
+    {
+      "atMs": 6707,
+      "event": {
+        "type": "delta",
+        "text": "when the"
+      }
+    },
+    {
+      "atMs": 7186,
+      "event": {
+        "type": "delta",
+        "text": " underlying "
+      }
+    },
+    {
+      "atMs": 7244,
+      "event": {
+        "type": "delta",
+        "text": "stream is"
+      }
+    },
+    {
+      "atMs": 7310,
+      "event": {
+        "type": "delta",
+        "text": " fast."
+      }
+    },
+    {
+      "atMs": 7370,
+      "event": {
+        "type": "step",
+        "id": "answer",
+        "label": "Compose the answer",
+        "status": "done"
+      }
+    }
+  ]
+}

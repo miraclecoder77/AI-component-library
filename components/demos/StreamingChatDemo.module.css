@@ -1,0 +1,134 @@
+.demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.transcript {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-height: 26rem;
+  overflow-y: auto;
+  padding-right: var(--space-2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-7) transparent;
+}
+
+.turn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.role {
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-subtle);
+}
+
+.turn[data-role="user"] .body {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-3);
+  background: var(--bg-raised);
+}
+
+.userText {
+  font-size: var(--text-4);
+  white-space: pre-wrap;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5) 0;
+}
+
+.emptyText {
+  font-size: var(--text-2);
+  color: var(--fg-subtle);
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.suggestion {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: var(--text-2);
+  text-align: left;
+  color: var(--fg-muted);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out);
+}
+
+.suggestion:hover {
+  border-color: var(--accent-line);
+  background: var(--bg-hover);
+  color: var(--fg-default);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.hint {
+  margin-top: var(--space-2);
+  font-size: var(--text-2);
+  color: var(--fg-subtle);
+}
+
+/* Waiting-for-first-token indicator. */
+.thinking {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 1.6rem;
+}
+
+.thinkingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--fg-thinking);
+  animation: bounce var(--motion-shimmer) var(--ease-in-out) infinite;
+}
+
+.thinkingDot:nth-child(2) {
+  animation-delay: 160ms;
+}
+
+.thinkingDot:nth-child(3) {
+  animation-delay: 320ms;
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thinkingDot {
+    animation: none;
+    opacity: 0.6;
+  }
+}

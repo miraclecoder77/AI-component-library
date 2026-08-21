@@ -1,0 +1,139 @@
+{
+  "pattern": "structured-output",
+  "variant": "default",
+  "model": "gemini-3.7-flash",
+  "synthetic": true,
+  "recordedAt": null,
+  "frames": [
+    {
+      "atMs": 664,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Front"
+        }
+      }
+    },
+    {
+      "atMs": 902,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer"
+        }
+      }
+    },
+    {
+      "atMs": 1043,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind"
+        }
+      }
+    },
+    {
+      "atMs": 1323,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind Labs"
+        }
+      }
+    },
+    {
+      "atMs": 1606,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind Labs",
+          "location": "Remote (EU)"
+        }
+      }
+    },
+    {
+      "atMs": 1891,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind Labs",
+          "location": "Remote (EU)",
+          "employmentType": "full_time"
+        }
+      }
+    },
+    {
+      "atMs": 2231,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind Labs",
+          "location": "Remote (EU)",
+          "employmentType": "full_time",
+          "salaryMin": 95000
+        }
+      }
+    },
+    {
+      "atMs": 2375,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind Labs",
+          "location": "Remote (EU)",
+          "employmentType": "full_time",
+          "salaryMin": 95000,
+          "salaryMax": 125000,
+          "currency": "EUR"
+        }
+      }
+    },
+    {
+      "atMs": 2566,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind Labs",
+          "location": "Remote (EU)",
+          "employmentType": "full_time",
+          "salaryMin": 95000,
+          "salaryMax": 125000,
+          "currency": "EUR",
+          "skills": [
+            "TypeScript",
+            "React"
+          ]
+        }
+      }
+    },
+    {
+      "atMs": 2805,
+      "event": {
+        "type": "partial",
+        "json": {
+          "title": "Senior Frontend Engineer",
+          "company": "Northwind Labs",
+          "location": "Remote (EU)",
+          "employmentType": "full_time",
+          "salaryMin": 95000,
+          "salaryMax": 125000,
+          "currency": "EUR",
+          "skills": [
+            "TypeScript",
+            "React",
+            "Streaming UIs",
+            "Accessibility"
+          ],
+          "remote": true
+        }
+      }
+    }
+  ]
+}

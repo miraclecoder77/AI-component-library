@@ -1,0 +1,69 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-2);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    opacity var(--duration-fast) var(--ease-out);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes are set so a 44px touch target is reachable on the md variant. */
+.sm {
+  height: 2rem;
+  padding-inline: var(--space-3);
+  font-size: var(--text-2);
+}
+
+.md {
+  height: 2.5rem;
+  padding-inline: var(--space-4);
+  font-size: var(--text-3);
+}
+
+.solid {
+  background: var(--accent-solid);
+  color: var(--fg-on-accent);
+}
+
+.solid:hover:not(:disabled) {
+  background: var(--accent-solid-hover);
+}
+
+.soft {
+  background: var(--accent-bg);
+  color: var(--accent-text);
+}
+
+.soft:hover:not(:disabled) {
+  background: var(--accent-line);
+}
+
+.outline {
+  border: 1px solid var(--border-default);
+  color: var(--fg-default);
+}
+
+.outline:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+}
+
+.ghost {
+  color: var(--fg-muted);
+}
+
+.ghost:hover:not(:disabled) {
+  background: var(--bg-hover);
+  color: var(--fg-default);
+}

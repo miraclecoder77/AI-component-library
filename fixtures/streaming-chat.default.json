@@ -1,0 +1,527 @@
+{
+  "pattern": "streaming-chat",
+  "variant": "default",
+  "model": "gemini-3.7-flash",
+  "synthetic": true,
+  "recordedAt": null,
+  "frames": [
+    {
+      "atMs": 305,
+      "event": {
+        "type": "delta",
+        "text": "Streaming changes"
+      }
+    },
+    {
+      "atMs": 354,
+      "event": {
+        "type": "delta",
+        "text": " what "
+      }
+    },
+    {
+      "atMs": 418,
+      "event": {
+        "type": "delta",
+        "text": "the user"
+      }
+    },
+    {
+      "atMs": 884,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 913,
+      "event": {
+        "type": "delta",
+        "text": "doing while"
+      }
+    },
+    {
+      "atMs": 974,
+      "event": {
+        "type": "delta",
+        "text": " they "
+      }
+    },
+    {
+      "atMs": 1015,
+      "event": {
+        "type": "delta",
+        "text": "wait. Instead"
+      }
+    },
+    {
+      "atMs": 1081,
+      "event": {
+        "type": "delta",
+        "text": " of "
+      }
+    },
+    {
+      "atMs": 1107,
+      "event": {
+        "type": "delta",
+        "text": "watching a"
+      }
+    },
+    {
+      "atMs": 1145,
+      "event": {
+        "type": "delta",
+        "text": " spinner "
+      }
+    },
+    {
+      "atMs": 1181,
+      "event": {
+        "type": "delta",
+        "text": "and wondering"
+      }
+    },
+    {
+      "atMs": 1242,
+      "event": {
+        "type": "delta",
+        "text": " whether "
+      }
+    },
+    {
+      "atMs": 1476,
+      "event": {
+        "type": "delta",
+        "text": "anything is"
+      }
+    },
+    {
+      "atMs": 1531,
+      "event": {
+        "type": "delta",
+        "text": " happening, "
+      }
+    },
+    {
+      "atMs": 1575,
+      "event": {
+        "type": "delta",
+        "text": "they start"
+      }
+    },
+    {
+      "atMs": 1607,
+      "event": {
+        "type": "delta",
+        "text": " reading, "
+      }
+    },
+    {
+      "atMs": 1662,
+      "event": {
+        "type": "delta",
+        "text": "and the"
+      }
+    },
+    {
+      "atMs": 1728,
+      "event": {
+        "type": "delta",
+        "text": " remaining "
+      }
+    },
+    {
+      "atMs": 2163,
+      "event": {
+        "type": "delta",
+        "text": "generation time"
+      }
+    },
+    {
+      "atMs": 2208,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 2235,
+      "event": {
+        "type": "delta",
+        "text": "spent productively."
+      }
+    },
+    {
+      "atMs": 2263,
+      "event": {
+        "type": "delta",
+        "text": "\n\nThe "
+      }
+    },
+    {
+      "atMs": 2311,
+      "event": {
+        "type": "delta",
+        "text": "number that"
+      }
+    },
+    {
+      "atMs": 2363,
+      "event": {
+        "type": "delta",
+        "text": " matters "
+      }
+    },
+    {
+      "atMs": 2427,
+      "event": {
+        "type": "delta",
+        "text": "most is"
+      }
+    },
+    {
+      "atMs": 2652,
+      "event": {
+        "type": "delta",
+        "text": " time "
+      }
+    },
+    {
+      "atMs": 2706,
+      "event": {
+        "type": "delta",
+        "text": "to first"
+      }
+    },
+    {
+      "atMs": 2755,
+      "event": {
+        "type": "delta",
+        "text": " token, "
+      }
+    },
+    {
+      "atMs": 3202,
+      "event": {
+        "type": "delta",
+        "text": "not total"
+      }
+    },
+    {
+      "atMs": 3264,
+      "event": {
+        "type": "delta",
+        "text": " duration. "
+      }
+    },
+    {
+      "atMs": 3324,
+      "event": {
+        "type": "delta",
+        "text": "A reply"
+      }
+    },
+    {
+      "atMs": 3379,
+      "event": {
+        "type": "delta",
+        "text": " that "
+      }
+    },
+    {
+      "atMs": 3414,
+      "event": {
+        "type": "delta",
+        "text": "begins in"
+      }
+    },
+    {
+      "atMs": 3468,
+      "event": {
+        "type": "delta",
+        "text": " 200ms "
+      }
+    },
+    {
+      "atMs": 3501,
+      "event": {
+        "type": "delta",
+        "text": "and finishes"
+      }
+    },
+    {
+      "atMs": 3555,
+      "event": {
+        "type": "delta",
+        "text": " in "
+      }
+    },
+    {
+      "atMs": 3581,
+      "event": {
+        "type": "delta",
+        "text": "eight seconds"
+      }
+    },
+    {
+      "atMs": 3618,
+      "event": {
+        "type": "delta",
+        "text": " feels "
+      }
+    },
+    {
+      "atMs": 3935,
+      "event": {
+        "type": "delta",
+        "text": "faster than"
+      }
+    },
+    {
+      "atMs": 3994,
+      "event": {
+        "type": "delta",
+        "text": " one "
+      }
+    },
+    {
+      "atMs": 4046,
+      "event": {
+        "type": "delta",
+        "text": "that begins"
+      }
+    },
+    {
+      "atMs": 4106,
+      "event": {
+        "type": "delta",
+        "text": " in "
+      }
+    },
+    {
+      "atMs": 4158,
+      "event": {
+        "type": "delta",
+        "text": "three seconds"
+      }
+    },
+    {
+      "atMs": 4198,
+      "event": {
+        "type": "delta",
+        "text": " and "
+      }
+    },
+    {
+      "atMs": 4231,
+      "event": {
+        "type": "delta",
+        "text": "finishes in"
+      }
+    },
+    {
+      "atMs": 4255,
+      "event": {
+        "type": "delta",
+        "text": " four, "
+      }
+    },
+    {
+      "atMs": 4288,
+      "event": {
+        "type": "delta",
+        "text": "because the"
+      }
+    },
+    {
+      "atMs": 4338,
+      "event": {
+        "type": "delta",
+        "text": " first "
+      }
+    },
+    {
+      "atMs": 4402,
+      "event": {
+        "type": "delta",
+        "text": "one stops"
+      }
+    },
+    {
+      "atMs": 4443,
+      "event": {
+        "type": "delta",
+        "text": " feeling "
+      }
+    },
+    {
+      "atMs": 4496,
+      "event": {
+        "type": "delta",
+        "text": "like waiting"
+      }
+    },
+    {
+      "atMs": 4552,
+      "event": {
+        "type": "delta",
+        "text": " almost "
+      }
+    },
+    {
+      "atMs": 4583,
+      "event": {
+        "type": "delta",
+        "text": "immediately. That"
+      }
+    },
+    {
+      "atMs": 4646,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 4699,
+      "event": {
+        "type": "delta",
+        "text": "also why"
+      }
+    },
+    {
+      "atMs": 4738,
+      "event": {
+        "type": "delta",
+        "text": " a "
+      }
+    },
+    {
+      "atMs": 4799,
+      "event": {
+        "type": "delta",
+        "text": "stop control"
+      }
+    },
+    {
+      "atMs": 4840,
+      "event": {
+        "type": "delta",
+        "text": " is "
+      }
+    },
+    {
+      "atMs": 4891,
+      "event": {
+        "type": "delta",
+        "text": "essential: once"
+      }
+    },
+    {
+      "atMs": 5224,
+      "event": {
+        "type": "delta",
+        "text": " people "
+      }
+    },
+    {
+      "atMs": 5250,
+      "event": {
+        "type": "delta",
+        "text": "can read"
+      }
+    },
+    {
+      "atMs": 5292,
+      "event": {
+        "type": "delta",
+        "text": " along, "
+      }
+    },
+    {
+      "atMs": 5338,
+      "event": {
+        "type": "delta",
+        "text": "they will"
+      }
+    },
+    {
+      "atMs": 5583,
+      "event": {
+        "type": "delta",
+        "text": " often "
+      }
+    },
+    {
+      "atMs": 5648,
+      "event": {
+        "type": "delta",
+        "text": "know the"
+      }
+    },
+    {
+      "atMs": 5674,
+      "event": {
+        "type": "delta",
+        "text": " answer "
+      }
+    },
+    {
+      "atMs": 5863,
+      "event": {
+        "type": "delta",
+        "text": "is wrong"
+      }
+    },
+    {
+      "atMs": 5905,
+      "event": {
+        "type": "delta",
+        "text": " before "
+      }
+    },
+    {
+      "atMs": 6151,
+      "event": {
+        "type": "delta",
+        "text": "it is"
+      }
+    },
+    {
+      "atMs": 6183,
+      "event": {
+        "type": "delta",
+        "text": " finished, "
+      }
+    },
+    {
+      "atMs": 6243,
+      "event": {
+        "type": "delta",
+        "text": "and they"
+      }
+    },
+    {
+      "atMs": 6283,
+      "event": {
+        "type": "delta",
+        "text": " need "
+      }
+    },
+    {
+      "atMs": 6316,
+      "event": {
+        "type": "delta",
+        "text": "a way"
+      }
+    },
+    {
+      "atMs": 6352,
+      "event": {
+        "type": "delta",
+        "text": " out."
+      }
+    }
+  ]
+}

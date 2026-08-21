@@ -1,0 +1,61 @@
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-subtle);
+}
+
+.model {
+  color: var(--fg-muted);
+}
+
+.metric {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+.label {
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  font-size: var(--text-1);
+}
+
+.value {
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.value[data-grade="good"] {
+  color: var(--fg-latency-good);
+}
+
+.value[data-grade="warn"] {
+  color: var(--fg-latency-warn);
+}
+
+.value[data-grade="bad"] {
+  color: var(--fg-latency-bad);
+}
+
+.recorded {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  background: color-mix(in oklch, var(--surface-recorded) 16%, transparent);
+  color: var(--warning-text);
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: var(--radius-full);
+  background: var(--surface-recorded);
+}

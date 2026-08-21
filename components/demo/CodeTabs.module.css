@@ -1,0 +1,124 @@
+.root {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-3);
+  background: var(--bg-subtle);
+  overflow: hidden;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  padding-right: var(--space-2);
+}
+
+/* The tab strip scrolls horizontally on narrow screens rather than wrapping
+   into two rows, which would shift the panel below it. */
+.list {
+  display: flex;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.trigger {
+  padding: var(--space-3) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  white-space: nowrap;
+  color: var(--fg-subtle);
+  border-bottom: 2px solid transparent;
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.trigger:hover {
+  color: var(--fg-muted);
+}
+
+.trigger[data-state="active"] {
+  color: var(--fg-default);
+  border-bottom-color: var(--accent-solid);
+}
+
+.copy {
+  flex-shrink: 0;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-2);
+  font-size: var(--text-1);
+  color: var(--fg-subtle);
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out);
+}
+
+.copy:hover {
+  background: var(--bg-hover);
+  color: var(--fg-default);
+}
+
+.content {
+  padding: var(--space-4);
+}
+
+.note {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-2);
+  color: var(--fg-subtle);
+}
+
+.path {
+  color: var(--fg-muted);
+}
+
+.dash {
+  margin-inline: var(--space-2);
+}
+
+.code {
+  max-height: 30rem;
+  overflow: auto;
+  border-radius: var(--radius-2);
+  scrollbar-width: thin;
+}
+
+.code :global(pre.shiki) {
+  padding: var(--space-4);
+  font-size: var(--text-2);
+  line-height: var(--leading-snug);
+  /* shiki emits both palettes as custom properties; pick one per theme so
+     the block never fights the page. */
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+.code :global(pre.shiki span) {
+  color: var(--shiki-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .code :global(pre.shiki) {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+
+  :root:not([data-theme="light"]) .code :global(pre.shiki span) {
+    color: var(--shiki-dark);
+  }
+}
+
+:root[data-theme="dark"] .code :global(pre.shiki) {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+
+:root[data-theme="dark"] .code :global(pre.shiki span) {
+  color: var(--shiki-dark);
+}

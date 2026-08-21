@@ -1,69 +1,56 @@
-import Image from "next/image";
+import Link from "next/link";
+import { PATTERNS, PLANNED } from "@/lib/registry";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function GalleryPage() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      <section className={styles.hero}>
+        <h1 className={styles.title}>
+          Interface patterns for AI products, built properly.
+        </h1>
+        <p className={styles.lede}>
+          Every pattern here is live, runs against a real model, and shows the
+          source that produced it. The interesting parts are the ones usually
+          skipped: what happens before the first token, what a stop button has
+          to actually do, and how any of it behaves for a screen reader.
+        </p>
+      </section>
+
+      <section className={styles.section} aria-labelledby="patterns-heading">
+        <h2 id="patterns-heading" className={styles.sectionHeading}>
+          Patterns
+        </h2>
+
+        <ul className={styles.grid}>
+          {PATTERNS.map((pattern) => (
+            <li key={pattern.slug}>
+              <Link href={`/patterns/${pattern.slug}`} className={styles.card}>
+                <h3 className={styles.cardTitle}>{pattern.title}</h3>
+                <p className={styles.cardBlurb}>{pattern.blurb}</p>
+                <span className={styles.cardLink} aria-hidden="true">
+                  Open demo →
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={styles.section} aria-labelledby="planned-heading">
+        <h2 id="planned-heading" className={styles.sectionHeading}>
+          Next
+        </h2>
+
+        <ul className={styles.plannedList}>
+          {PLANNED.map((item) => (
+            <li key={item.title} className={styles.planned}>
+              <span className={styles.plannedTitle}>{item.title}</span>
+              <span className={styles.plannedBlurb}>{item.blurb}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 }

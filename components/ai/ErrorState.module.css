@@ -1,0 +1,58 @@
+.block {
+  padding: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-left: 2px solid var(--danger-solid);
+  border-radius: var(--radius-3);
+  background: var(--bg-subtle);
+}
+
+/* Rate limits and empty responses are expected operating conditions on a free
+   tier, not faults. Colouring them like errors overstates the problem. */
+.block[data-code="rate_limit"],
+.block[data-code="empty"] {
+  border-left-color: var(--warning-solid);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.icon {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--danger-solid);
+  flex-shrink: 0;
+}
+
+.block[data-code="rate_limit"] .icon,
+.block[data-code="empty"] .icon {
+  background: var(--warning-solid);
+}
+
+.title {
+  font-size: var(--text-3);
+  font-weight: var(--weight-semibold);
+  color: var(--fg-default);
+}
+
+.message {
+  margin-top: var(--space-2);
+  font-size: var(--text-3);
+  color: var(--fg-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.hint {
+  font-size: var(--text-2);
+  color: var(--fg-subtle);
+}

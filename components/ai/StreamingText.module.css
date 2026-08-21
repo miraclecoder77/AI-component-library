@@ -1,0 +1,47 @@
+.text {
+  font-size: var(--text-4);
+  line-height: var(--leading-relaxed);
+  color: var(--fg-default);
+}
+
+.paragraph + .paragraph {
+  margin-top: var(--space-4);
+}
+
+/* Empty paragraphs would otherwise collapse and make spacing jump as the
+   stream crosses a paragraph break. */
+.paragraph:empty::before {
+  content: "";
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1.05em;
+  margin-left: 0.08em;
+  vertical-align: text-bottom;
+  background: var(--stream-cursor);
+  border-radius: 1px;
+  animation: blink var(--motion-cursor-blink) steps(2, start) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0.15;
+  }
+}
+
+/* The blink is decoration; the caret still marks the stream position, so it
+   stays visible rather than being removed. */
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
+}

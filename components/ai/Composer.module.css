@@ -1,0 +1,51 @@
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-4);
+  background: var(--bg-subtle);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.composer:focus-within {
+  border-color: var(--border-focus);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  resize: none;
+  padding: var(--space-2) var(--space-2);
+  font-size: var(--text-3);
+  line-height: var(--leading-snug);
+  color: var(--fg-default);
+  background: transparent;
+  /* Autosize sets the height; this is the floor before it runs. */
+  min-height: 2.25rem;
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.input::placeholder {
+  color: var(--fg-subtle);
+}
+
+.input:focus {
+  outline: none;
+}
+
+/* The focus ring lives on the wrapper, so removing it from the textarea keeps
+   a single ring rather than two nested ones. */
+.action {
+  flex-shrink: 0;
+}
+
+.stopIcon {
+  width: 9px;
+  height: 9px;
+  border-radius: 1px;
+  background: var(--danger-solid);
+}

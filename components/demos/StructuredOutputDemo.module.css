@@ -1,0 +1,154 @@
+.demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+@media (max-width: 820px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inputSide,
+.outputSide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  color: var(--fg-subtle);
+}
+
+.textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-3);
+  background: var(--bg-canvas);
+  font-size: var(--text-2);
+  line-height: var(--leading-normal);
+  resize: vertical;
+  scrollbar-width: thin;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.progress {
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-subtle);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-3);
+  background: var(--bg-canvas);
+  overflow: hidden;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-3) var(--space-4);
+  min-height: 2.75rem;
+}
+
+.field + .field {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.fieldLabel {
+  font-size: var(--text-2);
+  color: var(--fg-subtle);
+}
+
+.fieldValue {
+  font-size: var(--text-3);
+  color: var(--fg-default);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  /* Values arrive character by character; a transition here would fight the
+     stream rather than smooth it. */
+}
+
+.field[data-empty] .fieldValue {
+  color: var(--fg-subtle);
+}
+
+.placeholder {
+  display: block;
+}
+
+.shimmer {
+  display: block;
+  width: 60%;
+  height: 0.75rem;
+  border-radius: var(--radius-1);
+  background: linear-gradient(
+    90deg,
+    var(--surface-thinking) 0%,
+    var(--bg-hover) 50%,
+    var(--surface-thinking) 100%
+  );
+  background-size: 200% 100%;
+  animation: sweep var(--motion-shimmer) linear infinite;
+}
+
+@keyframes sweep {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer {
+    animation: none;
+    background: var(--surface-thinking);
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.tag {
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--accent-bg);
+  color: var(--accent-text);
+  font-size: var(--text-1);
+}
