@@ -17,12 +17,12 @@
   padding: var(--space-3) var(--space-5);
 }
 
+/* Typography belongs to the Logo component; this is only the link reset. */
 .brand {
-  font-size: var(--text-3);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-tight);
-  color: var(--fg-default);
+  display: inline-flex;
+  min-width: 0;
   text-decoration: none;
+  border-radius: var(--radius-2);
 }
 
 .nav {

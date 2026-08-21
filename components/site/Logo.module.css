@@ -1,0 +1,29 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.wordmark {
+  font-size: var(--text-3);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-default);
+  white-space: nowrap;
+}
+
+/* Below the narrowest breakpoint the mark carries the identity on its own and
+   the nav needs the room. The accessible name still comes from the link. */
+@media (max-width: 420px) {
+  .wordmark {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Logo } from "@/components/site/Logo";
 import { ThemeToggle, themeScript } from "@/components/site/ThemeToggle";
 import "./globals.css";
 import styles from "./layout.module.css";
@@ -41,8 +42,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
 
         <header className={styles.header}>
           <div className={styles.headerInner}>
-            <Link href="/" className={styles.brand}>
-              AI Interface Patterns
+            <Link href="/" className={styles.brand} aria-label="AI Interface Patterns, home">
+              <Logo />
             </Link>
             <nav className={styles.nav}>
               <Link href="/foundations" className={styles.navLink}>

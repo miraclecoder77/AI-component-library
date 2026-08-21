@@ -1,3 +1,5 @@
+<img src="public/logo.svg" alt="" width="64" height="64">
+
 # AI Interface Patterns
 
 A working gallery of interface patterns for AI products. Every pattern is
@@ -60,10 +62,18 @@ npm run test:e2e
 npm run fixtures:record
 ```
 
+```bash
+npm run icons
+```
+
 `fixtures:record` re-captures the recorded responses against the live API.
 Run it with the dev server up and a key configured; it refuses to write a
 fixture that came back in `recorded` mode, so a quota-limited run cannot
 silently re-record a fixture from a fixture.
+
+`npm run icons` regenerates the favicon, touch icon, and logo from the single
+geometry definition in `lib/brand.ts`, so the mark cannot drift between the
+header and the browser tab.
 
 ---
 
